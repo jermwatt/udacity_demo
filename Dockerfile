@@ -46,7 +46,7 @@ RUN jupyter nbextension enable --py widgetsnbextension --sys-prefix
 # Remove pyqt and qt pulled in for matplotlib since we're only ever going to
 # use notebook-friendly backends in these images
 RUN conda create --quiet --yes -p $CONDA_DIR/envs/python2 python=2.7 \
-    'opencv' \
+    'opencv=2.4*' \
     'ipython=4.2*' \
     'ipywidgets=5.1*' \
     'pandas=0.18*' \
